@@ -63,8 +63,8 @@
 
 // Унарный + - это + который идет ПЕРЕД
 
-let incr = 10,
-    decr = 10;
+// let incr = 10,
+//     decr = 10;
 
 // incr++;
 // decr--;
@@ -87,5 +87,5 @@ let incr = 10,
 //     isClose = true;
 // console.log(isChecked || !isClose);
 
-// Работа с git и github
+// Работа с git и github + git kraken
 
