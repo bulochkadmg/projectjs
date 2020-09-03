@@ -1,17 +1,17 @@
-'use strict';
+'use strict'; //! Строгий режим разработки на новом стандарте
 
-// // s = 15;
+// s = 15;
 
-// // // переменные
-// // let number = 5;
-// // const age = 25;
-// // console.log(number);
-// // number = 10;
-// // console.log(number);
+//! переменные
+// let number = 5;
+// const age = 25;
+// console.log(number);
+// number = 10;
+// console.log(number);
 
-// // var name = 'Oleg';
+// var name = 'Oleg';
 
-// // Типы данных
+//! Типы данных
 // let number = 4.6;
 // console.log(4/0);
 
@@ -26,7 +26,7 @@
 //     city: `Kharkov`
 // };
 
-// // console.log(flex.age);
+// console.log(flex.age);
 // console.log(flex[`name`]);
 
 // const arr = [`hello`, `hi`, `priv`];
@@ -43,15 +43,15 @@
 
 // const answers = [];
 
-// // answers[0] = prompt('Как Ваше имя?', '');
-// // answers[1] = prompt('Как Ваша фамилия?', '');
-// // answers[2] = prompt('Сколько вам лет?', '');
+// answers[0] = prompt('Как Ваше имя?', '');
+// answers[1] = prompt('Как Ваша фамилия?', '');
+// answers[2] = prompt('Сколько вам лет?', '');
 
 // console.log(typeof(answers));
 // console.log(typeof(null)); // официально признаная ошибка которая выводит объект
 
 
-// Интерполяция
+//! Интерполяция
 // const category = 'toys';
 
 // console.log(`https://someurl.com/${category}`);
@@ -59,7 +59,7 @@
 // const user = 'Ivan';
 // alert(`Hi, ${user}`);
 
-// Операторы в JS
+//! Операторы в JS
 
 // Унарный + - это + который идет ПЕРЕД
 
@@ -80,12 +80,79 @@
 
 // console.log(2 * 4 == '8');
 
-// // && - оператор И . работает когда оба варианта правдивы
-// // || - оператор ИЛИ. Работает когда один из вариантов правдив.
+// && - оператор И . работает когда оба варианта правдивы
+// || - оператор ИЛИ. Работает когда один из вариантов правдив.
 
 // const isChecked = false,
 //     isClose = true;
 // console.log(isChecked || !isClose);
 
-// Работа с git и github + git kraken
+//! Работа с git и github + git kraken
 
+// git init
+// git add .
+// git commit -m "first commit"
+// git push
+
+//! Условия 
+
+// if (4 == 9) { // в скобках преобразовывается все к boolean типу false or true
+//     console.log('OK');
+// } else {
+//     console.log('error');
+// }
+
+// const num = 50;
+
+// if (num < 49) {
+//     console.log('error');
+// } else if (num > 100) {
+//     console.log('no');
+// } else {
+//     console.log('yes');
+// }
+
+//! Тернарный оператор
+
+// (num === 50) ? console.log('Ok') : console.log('no');
+
+//! Switch case
+// const num = 50;
+// switch (num) { // Проверяет только на строгое сравнение
+//     case 49:
+//         console.log('No!');
+//         break;
+//     case 51:
+//         console.log('Error');
+//         break;
+//     case 50:
+//         console.log('ok');
+//         break;
+//     default:
+//         console.log('default');
+//         break;
+// }
+
+//! Циклы 
+let num = 50;
+
+// while (num < 55) {  // !пока условие не выполнено , будут происходить действия
+//     console.log(num);
+//     num++;
+// }
+
+do {  //! Сначала делает , а потом проверяет уже условие и при необходимости выходит из цикла
+    console.log(num);
+    num++;
+}
+while (num < 55) {
+    console.log(num);
+    num++;
+}
+
+for (let i = 1; i < 10; i++) { //! Сначала задается переменная; потом задается условие; что будет проиходить дальше;
+    if (i === 6) {
+        continue;
+    }
+    console.log(i); //! само действие 
+}
