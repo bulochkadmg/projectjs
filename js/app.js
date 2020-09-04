@@ -243,3 +243,79 @@ const test = '12.2px';
 // console.log(parseInt(test)); //! Переводит число в другую систему вычисления
 console.log(parseFloat(test)); //! Возвращает число в десятичном значении
 */
+
+//! CallBack функции - должна выполниться сразу после того , как другая функция завершила свое выполнение
+/*
+function first() {
+    // code
+    setTimeout(function() {
+        console.log(1);
+    }, 500);
+}
+
+function second() {
+    console.log(2);
+}
+
+first();
+second();
+
+function learJS(lang, callback) {
+    console.log(`Я учу: ${lang}`);
+    callback();
+}
+
+learJS(`Javascript`, function() {
+    console.log('Я прошел этот урок!');
+});
+*/
+//! Объекты, деструктуризация объектов (ES6)
+//! Объекты - это структуры , которые позволяют сохранять в себе любые типы данных в виде ключ: значени
+//! Методы - встроенное свойство/функция внутрь объекта , который выполняет какое - либо действие
+/*
+const options = {
+    name: 'test',
+    width: 1024,
+    height: 1024,
+    colors: {
+        border: 'black',
+        background: 'red'
+    },
+    makeTest: function() { //! Создали метод внутри объекта options
+        console.log('test');
+    }
+};
+
+options.makeTest();
+
+const {border, background} = options.colors; //! Деструктуризация объекта . вынесли свойства из объекта в отдельные переменные.
+console.log(border);
+*/
+
+// console.log(Object.keys(options)); //! Выведет массив со всеми ключами внутри объекта
+/*
+console.log(options.name);
+
+delete options.name; //! Метод позволяет удалить пару ключ:значение с объекта
+console.log(options);
+//! Прямых констант не существует !!!!
+
+let counter = 0;
+for (let key in options) { //! in позволяет перебрать значения внутри объекта
+    if (typeof(options[key]) === 'object') {
+        for ( let i in options[key]) {
+            console.log(`Свойствой ${i} имеет значение ${options[key][i]}`);
+            counter++;
+        }
+    } else {
+        console.log(`Свойство ${key} имеет значение ${options[key]}`);
+        counter++;
+    }
+}
+
+console.log(counter);
+*/
+// console.log(Object.keys(products).length); //! Подсчет ключей в объекте
+
+
+//! Массивы и псевдомассивы
