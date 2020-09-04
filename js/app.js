@@ -318,4 +318,146 @@ console.log(counter);
 // console.log(Object.keys(products).length); //! Подсчет ключей в объекте
 
 
-//! Массивы и псевдомассивы
+//! Массивы и псевдомассивы (у псевдомассивов не будет никаких методов!!!!)
+/*
+const arr = [1, 2, 3, 6, 8, 10];
+arr.sort(compareNum);
+console.log(arr);
+
+function compareNum(a, b) { //! функция чтобы сортировать числа по порядку вызывается как аргумент в методе .sort();
+    return a - b;
+}
+
+/*
+arr[99] = 0;
+
+console.log(arr.length); //! последний индекс массива + 1 . Могут спросить на собеседовании
+*/
+/*
+arr.forEach(function(item, i, arr) { //! Более настраивыемый перебор как for только имеет внутри callback функцию. Принимает до 3 аргументов (1. то что мы будем перебирать т.е. тело массива(назвать можно как угодно). 2. Номер по порядку. 3. Ссылка на массив , который перебираем )
+
+    console.log(`${i}: ${item} внутри массива ${arr}`);
+
+});
+
+// arr.pop(); //! Удаляет последний элемент из массива
+arr.push(10); //! добавляет в конец массива элемент
+
+console.log(arr);
+
+for (let i = 0; i < arr.length; i++) {
+    console.log(arr[i]);
+}
+
+for ( let value of arr) { //! работает только с масивноподобными сущностями
+    console.log(value); 
+}
+
+const str = prompt('', '');
+const products = str.split(', '); //! Метод split указывает каким будет разделение и превращает строку в массив.
+products.sort(); //! Сортирует массив и если не передавать никаких аргументов , сортировка происходит по алфавиту .
+console.log(products.join('; ')); //! Метод join() указывает каким знаком будет разделение и превращает массив в строку .
+*/
+
+//! Передача по ссылке или по значению. Spread оператор (ES6 - ES9)
+//! Примитивные типы данных (строки, числа, булеаны) передаются по знаку равно(присваиванию)
+//! Типы данных вроде объектов , массивов , функция и т.п. передаются только по ссылке
+/*
+let a = 5,
+    b = a;
+
+b = b + 5;
+
+console.log(b);
+console.log(a);
+
+const obj = {
+    a: 5,
+    b: 1
+};
+
+// const copy = obj; //! Ссылка передается
+
+// copy.a = 10;
+
+// console.log(copy);
+// console.log(obj);
+
+function copy(mainObj) { //! Функция для копирования объекта , при этом сохраняет старые значения , а новые переносит в новый объект
+    let objCopy = {};
+
+    let key;
+    for (key in mainObj) {
+        objCopy[key] = mainObj[key];
+    }
+
+    return objCopy;
+}
+
+const numbers = {
+    a: 2,
+    b: 5,
+    c: {
+        x: 7,
+        y: 4
+    }
+};
+
+const newNumbers = copy(numbers);
+
+newNumbers.a = 10;
+console.log(newNumbers);
+
+//! При клонировании создаются глубокие или поверхностные копии . Пример выше - поверхностная копия.
+
+const add = {
+    d: 17,
+    e: 20
+};
+
+console.log(Object.assign(numbers, add)); //! Метод объекта .assign позволяет объединять один объект с другим(первый аргумент - куда будет внесен, второй откуда)
+
+const clone = Object.assign({}, add);
+
+clone.d = 20;
+
+console.log(add);
+console.log(clone);
+
+const oldArray = ['a', 'b', 'c'];
+const newArray = oldArray.slice();
+
+newArray[1] = 'dfgfdgdfg';
+console.log(newArray);
+console.log(oldArray);
+
+//! ES6 - ES9 copy obj , arr. Spread (...) - вытаскивает внутринности массива и соединяет все в один массив 
+const video = ['youtube', 'vimeo', 'rutube'],
+        blogs = ['wordpress', 'livejournal', 'blogger'],
+        internet = [...video, ...blogs, 'vk', 'facebook'];
+
+console.log(internet);
+
+function log(a, b, c) {
+    console.log(a);
+    console.log(b);
+    console.log(c);
+}
+
+const valka = [2, 5, 7];
+
+log(...valka);
+
+const array = ['a', 'b'];
+
+const newAarray = [...array];
+
+
+const jh = {
+    one: 1,
+    two: 2
+};
+
+const newJh = {...jh};
+console.log(newJh);
+*/
