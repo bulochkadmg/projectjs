@@ -461,3 +461,46 @@ const jh = {
 const newJh = {...jh};
 console.log(newJh);
 */
+
+
+//! Основы ООП, прототипно-ориентированное наследование
+/*
+let str = 'some'; //! примитивная строка
+let strObj = new String(str); //! строка обернутая в объект
+
+console.log(typeof(str)); //! вернет тип строка
+console.log(typeof(strObj)); //! вернет тип объект
+
+console.dir([1,2,3,4]);
+
+
+const soldier = {
+    health: 400,
+    armor: 100,
+    amo: 89,
+    sayPrivet: function() {
+        console.log('privet');
+    }
+};
+
+
+const jonh = Object.create(soldier); //! Создает переменную john и передает ей доступ ко всем свойствам от переменной soldier(протитипирование).
+
+console.log(jonh.amo);
+
+
+
+
+/*
+const jonh = {
+    health: 100
+};
+
+jonh.__proto__ = soldier; //! позволяет наследовать все ключ значения с одного объекта для другого(старый формат использования)
+
+Object.setPrototypeOf(jonh, soldier); //! Новый стандарт прототипирование объектов. Первый аргумент указывает куда будут помещены прототипы, второй указывает от куда их взаимствовать.
+
+
+console.log(jonh.amo);
+jonh.sayPrivet();
+*/
