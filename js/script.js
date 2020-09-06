@@ -46,7 +46,7 @@ const personalMovieDB = {
         for (let n = 1; n <= 3; n++) {
             let genre = prompt(`Ваш любимый жанр под номером ${n}`);
 
-            if (genre === null || genres === '') {
+            if (genre === null || genre === '') {
                 console.log('Вы ввели некорректные данные или не ввели их вовсе');
                 i--;
             } else {
